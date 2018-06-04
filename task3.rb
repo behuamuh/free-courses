@@ -6,4 +6,4 @@ end
 d = str.scan(/\d/).join
 g = str.scan(/[aeiouyAEIOUYаеёиоуыэюяАЕЁИОУЫЭЮЯ]/).join
 s = str.scan(/[qwrtpsdfghjklzxcvbnmQWRTPSDFGHJKLZXCVBNMйцкнгшщзхъфвпрлджчсмтьбЙЦКНГШЩЗХЪФВПРЛДЖЧСМТЬБ]/).join
-puts g + s + d
+puts g + " " + s + " " + d
