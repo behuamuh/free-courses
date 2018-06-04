@@ -1,7 +1,7 @@
 # Task 1
 
 s = ''
-for i in 2 ... ARGV.length
+for i in 0 ... ARGV.length
   s = s + ARGV[i]
 end
 s = s.downcase.scan(/\w+/).join
