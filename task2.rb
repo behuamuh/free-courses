@@ -1,5 +1,5 @@
 # Task 2
-num = ARGV[0].to_i
+num = ARGV[2].to_i
 n = num.abs
 f0 = 0
 f1 = 1
