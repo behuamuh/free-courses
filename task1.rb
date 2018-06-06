@@ -1,5 +1,5 @@
 # Task 1
-
+=begin
 def palindrom(s)
   s = s.downcase.scan(/\w+/).join
   if s == s.reverse
@@ -13,4 +13,4 @@ for i in 0 ... ARGV.length
   s = s + ARGV[i]
 end
 puts palindrom(s)
-
+=end
