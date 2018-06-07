@@ -19,4 +19,4 @@ def fibo(num)
 end
 
 num = ARGV[0].to_i
-puts fibo(num)
+puts fibo(num).to_s
