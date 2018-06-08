@@ -1,5 +1,12 @@
-# Task 2
-def fibo(num)
+def fibo(input)
+  exit if input.nil?
+  exit if !input.ascii_only?
+
+  tester = Integer(input) != nil rescue false
+  num = input.to_i if tester
+
+  exit if !( num.kind_of?(0.class) )
+  exit if (num < -10000) || (num > 10000)
   n = num.abs
   f0 = 0
   f1 = 1
@@ -18,5 +25,5 @@ def fibo(num)
   return fi
 end
 
-num = ARGV[0].to_i
-puts fibo(num).to_s
+num = ARGV[0]
+puts fibo(num)
