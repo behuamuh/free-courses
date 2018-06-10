@@ -1,29 +1,8 @@
-def fibo(input)
-  exit if input.nil?
-  exit if !input.ascii_only?
-
-  tester = Integer(input) != nil rescue false
-  num = input.to_i if tester
-
-  exit if !( num.kind_of?(0.class) )
-  exit if (num < -10000) || (num > 10000)
-  n = num.abs
-  f0 = 0
-  f1 = 1
-  if n==1 || n ==0
-    return n
-    exit
-  end
-  for i in 2 .. n
-    fi = f0 + f1
-    f0 = f1
-    f1 = fi
-  end
-  if num < 0 && n % 2 == 0
-    fi = -fi
-  end
-  return fi
+def getFibo(num)
+    def fib(n, hash = [0,1])
+        n.zero? ? hash[1] = 0 : hash.push(hash.reduce(:+)).shift
+        return n>2 ? fib(n-1, hash ) :  hash[1]
+    end
+    return ((num.to_i<0) && (num.to_i.abs%2).zero?) ? -1*fib(num.to_i.abs) : fib(num.to_i.abs)
 end
-
-num = ARGV[0]
-puts fibo(num)
+puts getFibo(ARGV[0])
