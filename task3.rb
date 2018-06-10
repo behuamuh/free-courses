@@ -1,14 +1,7 @@
-str = ''
-for i in 0 ... ARGV.length
-  str = str + ARGV[i]
-end
+str = ARGV.join.scan(/\w/).join
+g = str.scan(/[EYUIOAeyuioa]/).join
+s = str.scan(/[^EYUIOAeyuioa\d]/).join
 d = str.scan(/\d/).join
-g = str.scan(/[aeiouyYAEIOUаеёиоуыэюяАЕЁИОУЫЭЮЯ]/).join
-s = str.scan(/[qwrtpsdfghjklzxcvbnmyQWRTPSDFGHJKLZXCVBNMYйцкнгшщзхъфвпрлджчсмтьбЙЦКНГШЩЗХЪФВПРЛДЖЧСМТЬБ]/).join
-if g.length != 0
-	g += " "
-end
-if s.length != 0
-	s += " "
-end
+g += " " if g.length != 0
+s += " " if s.length != 0
 puts g + s + d
