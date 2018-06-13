@@ -6,4 +6,4 @@ def getFibo(input)
     num = Integer(input)
     return ( (num<0) && (num.abs%2).zero? ) ? -1*fib(num.abs) : fib(num.abs)
 end
-puts getFibo(ARGV[0])
+puts getFibo(ARGV[0]).to_s
