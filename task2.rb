@@ -17,5 +17,4 @@ def _fib(n)
         end
     end
 end
-
 puts fast_fib(ARGV[0].to_i)
